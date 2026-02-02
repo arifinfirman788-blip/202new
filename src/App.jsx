@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import hotelData from './data/hotel_data.json';
 import { 
   Target, 
   Layers, 
@@ -28,7 +29,8 @@ import {
   BarChart3,
   Video,
   Image,
-  X
+  X,
+  FileSpreadsheet
 } from 'lucide-react';
 
 const Section = ({ id, title, subtitle, icon: Icon, children, delay = 0, gradient = "from-indigo-600 to-violet-600" }) => (
@@ -139,6 +141,7 @@ const DataCard = ({ value, label, subtext, icon: Icon, color = "text-indigo-600"
 const App = () => {
   const [activeSection, setActiveSection] = React.useState('');
   const [showGaodeModal, setShowGaodeModal] = React.useState(false);
+  const [showExcelModal, setShowExcelModal] = React.useState(false);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -299,7 +302,7 @@ const App = () => {
               {/* 工作视频轮播 */}
               <div className="mt-6 rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-black h-32 relative group">
                 <video 
-                  src="/131new/video/f688a180eaffc8c281117271dd6bd668.mp4" 
+                  src="/202new/video/f688a180eaffc8c281117271dd6bd668.mp4" 
                   autoPlay
                   loop
                   muted
@@ -544,7 +547,18 @@ const App = () => {
         >
           {/* (一) 酒店智能体 */}
           <div className="mb-24">
-            <SubSectionTitle>（一）酒店智能体上线运行情况</SubSectionTitle>
+            <SubSectionTitle>
+              <div className="flex-1 flex items-center justify-between">
+                <span>（一）酒店智能体上线运行情况</span>
+                <button 
+                  onClick={() => setShowExcelModal(true)}
+                  className="flex items-center gap-2 bg-emerald-50 text-emerald-600 px-4 py-2 rounded-full text-sm font-bold hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                >
+                  <FileSpreadsheet size={16} />
+                  查看深度运营数据
+                </button>
+              </div>
+            </SubSectionTitle>
             
             {/* 关键数据 */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -584,7 +598,7 @@ const App = () => {
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/131new/image/2-1.png" alt="两会特别版" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/2-1.png" alt="两会特别版" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
@@ -601,7 +615,7 @@ const App = () => {
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/131new/image/2-2.png" alt="SaaS注册" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/2-2.png" alt="SaaS注册" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
@@ -619,7 +633,7 @@ const App = () => {
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/131new/image/2-3.png" alt="多端协同" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/2-3.png" alt="多端协同" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
@@ -637,7 +651,7 @@ const App = () => {
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/131new/image/2-4.png" alt="硬件交互" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/2-4.png" alt="硬件交互" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
@@ -655,7 +669,7 @@ const App = () => {
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/131new/image/2-5.png" alt="交易闭环" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/2-5.png" alt="交易闭环" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
@@ -833,7 +847,7 @@ const App = () => {
               </div>
               <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-white">
                 <img 
-                  src="/131new/image/微信图片_2026-02-02_210616_620.png" 
+                  src="/202new/image/微信图片_2026-02-02_210616_620.png" 
                   alt="IP家族长图" 
                   className="w-full h-auto block"
                 />
@@ -848,10 +862,10 @@ const App = () => {
               </div>
               <div className="rounded-[32px] overflow-hidden shadow-xl border border-slate-100 bg-black aspect-video relative group">
                 <video 
-                  src="/131new/video/2.mp4" 
+                  src="/202new/video/2.mp4" 
                   controls 
                   className="w-full h-full object-cover"
-                  poster="/131new/image/video-poster-placeholder.png" // 可选：添加封面图
+                  poster="/202new/image/video-poster-placeholder.png" // 可选：添加封面图
                 >
                   您的浏览器不支持视频播放。
                 </video>
@@ -907,7 +921,7 @@ const App = () => {
               <div className="w-full md:w-2/3">
                 <div className="aspect-video bg-slate-800/50 rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex items-center justify-center relative backdrop-blur-sm">
                   <img 
-                    src="/131new/image/1d8057d625a906bbc2e3a6660be207ab.png" 
+                    src="/202new/image/1d8057d625a906bbc2e3a6660be207ab.png" 
                     alt="运营效果展示" 
                     className="w-full h-full object-contain p-2"
                   />
@@ -919,13 +933,63 @@ const App = () => {
               <div className="w-full md:w-1/3">
                 <div className="aspect-[9/16] bg-slate-800/50 rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex items-center justify-center relative backdrop-blur-sm">
                   <img 
-                    src="/131new/image/246f8d254afcdecd35a289c87a616e5c.png" 
+                    src="/202new/image/246f8d254afcdecd35a289c87a616e5c.png" 
                     alt="交互界面展示" 
                     className="w-full h-full object-contain p-2"
                   />
                 </div>
                 <p className="text-center text-white/50 text-sm mt-4 font-bold">交互界面展示</p>
               </div>
+          </div>
+        </div>
+      )}
+
+      {/* Excel Modal */}
+      {showExcelModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10">
+          <div 
+            className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm" 
+            onClick={() => setShowExcelModal(false)}
+          />
+          <div className="relative z-10 bg-white w-full max-w-6xl max-h-[90vh] rounded-[32px] overflow-hidden flex flex-col shadow-2xl">
+             <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+               <div className="flex items-center gap-3">
+                 <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
+                   <FileSpreadsheet size={20} />
+                 </div>
+                 <h3 className="text-xl font-black text-slate-900">酒店智能体深度运营情况表</h3>
+               </div>
+               <button 
+                 onClick={() => setShowExcelModal(false)}
+                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-900 transition-all"
+               >
+                 <X size={24} />
+               </button>
+             </div>
+             <div className="overflow-auto p-6 flex-1">
+               <table className="w-full text-left border-collapse">
+                 <thead>
+                   <tr>
+                     {hotelData.columns.map((col, i) => (
+                       <th key={i} className="p-4 border-b border-slate-200 bg-slate-50 font-black text-slate-700 text-sm whitespace-nowrap sticky top-0">
+                         {col}
+                       </th>
+                     ))}
+                   </tr>
+                 </thead>
+                 <tbody>
+                   {hotelData.data.map((row, i) => (
+                     <tr key={i} className="hover:bg-slate-50 transition-colors">
+                       {row.map((cell, j) => (
+                         <td key={j} className="p-4 border-b border-slate-100 text-slate-600 text-sm whitespace-nowrap">
+                           {cell}
+                         </td>
+                       ))}
+                     </tr>
+                   ))}
+                 </tbody>
+               </table>
+             </div>
           </div>
         </div>
       )}
