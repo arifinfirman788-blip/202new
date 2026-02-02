@@ -799,41 +799,81 @@ const App = () => {
            <div className="bg-slate-900 text-white rounded-[48px] p-12 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600 rounded-full blur-[100px] opacity-30 -mr-20 -mt-20"></div>
              
-             <div className="grid md:grid-cols-2 gap-12 relative z-10">
-               <div className="space-y-12">
-                 <div>
-                   <h4 className="text-2xl font-black text-indigo-400 mb-4">1. 从“看数据”到“能分析、能预警、能调度”</h4>
-                   <ul className="space-y-3 text-slate-300">
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 客流、消费、产业数据统一汇聚</li>
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 自动分析变化、主动预警，支持自然语言追问分析</li>
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 移动端驾驶舱，实现“掌上决策”</li>
-                   </ul>
+             <div className="grid lg:grid-cols-12 gap-12 relative z-10 items-start">
+               {/* 左侧文字内容 */}
+               <div className="lg:col-span-7 grid md:grid-cols-2 gap-8">
+                 <div className="space-y-12">
+                   <div>
+                     <h4 className="text-2xl font-black text-indigo-400 mb-4">1. 从“看数据”到“能分析、能预警、能调度”</h4>
+                     <ul className="space-y-3 text-slate-300">
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 客流、消费、产业数据统一汇聚</li>
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 自动分析变化、主动预警，支持自然语言追问分析</li>
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 移动端驾驶舱，实现“掌上决策”</li>
+                     </ul>
+                   </div>
+                   
+                   <div>
+                     <h4 className="text-2xl font-black text-indigo-400 mb-4">2. 多源数据深度整合</h4>
+                     <p className="text-slate-300 leading-relaxed">
+                       地图、运营商、OTA、公共数据等多源数据交叉验证，确保数据真实准确。
+                     </p>
+                   </div>
                  </div>
-                 
-                 <div>
-                   <h4 className="text-2xl font-black text-indigo-400 mb-4">2. 多源数据深度整合</h4>
-                   <p className="text-slate-300 leading-relaxed">
-                     地图、运营商、OTA、公共数据等多源数据交叉验证，确保数据真实准确。
-                   </p>
+
+                 <div className="space-y-12">
+                   <div>
+                     <h4 className="text-2xl font-black text-indigo-400 mb-4">3. 可层层穿透，协同推进</h4>
+                     <ul className="space-y-3 text-slate-300">
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 省级 + 市州同步适配，从省一路点到具体景区</li>
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 同步推进应急指挥调度平台</li>
+                     </ul>
+                   </div>
+
+                   <div>
+                     <h4 className="text-2xl font-black text-indigo-400 mb-4">4. 真正给基层减负的“智能问策”</h4>
+                     <p className="text-slate-300 mb-3 font-medium">让 AI 帮基层查资料、找政策、做整理</p>
+                     <ul className="space-y-3 text-slate-400 text-sm">
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2"/> 内部知识库快速应答</li>
+                       <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2"/> 自动标注来源、确保权威</li>
+                     </ul>
+                   </div>
                  </div>
                </div>
 
-               <div className="space-y-12">
-                 <div>
-                   <h4 className="text-2xl font-black text-indigo-400 mb-4">3. 可层层穿透，协同推进</h4>
-                   <ul className="space-y-3 text-slate-300">
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 省级 + 市州同步适配，从省一路点到具体景区</li>
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5"/> 同步推进应急指挥调度平台</li>
-                   </ul>
-                 </div>
+               {/* 右侧展示位 */}
+               <div className="lg:col-span-5 flex flex-col gap-8">
+                 {/* PC端 */}
+                 <a href="https://glsw-provincescreen-test.aihuangxiaoxi.com/admin/#/index" target="_blank" rel="noopener noreferrer" className="group block">
+                   <div className="bg-slate-800/50 rounded-2xl p-2 border border-slate-700/50 hover:border-indigo-500/50 transition-all shadow-xl">
+                     <div className="aspect-[16/10] bg-slate-900 rounded-xl overflow-hidden relative">
+                       <img src="/202new/image/4991f55ea85abc50aa6a75c6effb763f.png" alt="PC端驾驶舱" className="w-full h-full object-cover" />
+                       <div className="absolute inset-0 bg-indigo-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-bold border border-white/20">点击访问管理后台</span>
+                       </div>
+                     </div>
+                   </div>
+                   <div className="flex items-center justify-center gap-2 mt-3 text-slate-400 group-hover:text-indigo-400 transition-colors">
+                      <LayoutDashboard size={16} />
+                      <span className="text-sm font-bold">PC端管理后台</span>
+                   </div>
+                 </a>
 
-                 <div>
-                   <h4 className="text-2xl font-black text-indigo-400 mb-4">4. 真正给基层减负的“智能问策”</h4>
-                   <p className="text-slate-300 mb-3 font-medium">让 AI 帮基层查资料、找政策、做整理</p>
-                   <ul className="space-y-3 text-slate-400 text-sm">
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2"/> 内部知识库快速应答</li>
-                     <li className="flex gap-3"><div className="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2"/> 自动标注来源、确保权威</li>
-                   </ul>
+                 {/* 移动端 - 居中显示 */}
+                 <div className="flex justify-center">
+                   <a href="https://glsw-provincescreen-test.aihuangxiaoxi.com/h5/#/" target="_blank" rel="noopener noreferrer" className="group block w-[200px]">
+                     <div className="bg-slate-800/50 rounded-[32px] p-2 border border-slate-700/50 hover:border-indigo-500/50 transition-all shadow-xl">
+                       <div className="aspect-[9/19.5] bg-slate-900 rounded-[24px] overflow-hidden relative">
+                         <img src="/202new/image/eec5799acf1fe30d813b4401c1dac7e8.png" alt="移动端驾驶舱" className="w-full h-full object-cover" />
+                         <div className="absolute inset-0 bg-indigo-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                           <span className="bg-white/10 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-bold border border-white/20">点击访问移动端</span>
+                         </div>
+                       </div>
+                     </div>
+                     <div className="flex items-center justify-center gap-2 mt-3 text-slate-400 group-hover:text-indigo-400 transition-colors">
+                        <Rocket size={16} />
+                        <span className="text-sm font-bold">移动端驾驶舱</span>
+                     </div>
+                   </a>
                  </div>
                </div>
              </div>
