@@ -734,32 +734,16 @@ const App = () => {
               <div className="lg:col-span-8">
                 <div className="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm h-full">
                   <h4 className="text-2xl font-black text-slate-900 mb-6">（二）景区智能体：1.0版本完成并试点</h4>
-                  
-                  <div className="space-y-6 mb-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 font-black">问</div>
-                      <div>
-                        <h5 className="text-lg font-bold text-slate-900 mb-1">涵盖全覆盖的智能问答</h5>
-                        <p className="text-slate-600 text-sm leading-relaxed">基本信息、游玩项目、活动演绎、攻略、票务、服务设施、历史文化等景区信息。</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center shrink-0 font-black">游</div>
-                      <div>
-                        <h5 className="text-lg font-bold text-slate-900 mb-1">打造“活地图”</h5>
-                        <p className="text-slate-600 text-sm leading-relaxed">支持游览路线规划及“跟随式”语音讲解。</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 text-sm font-medium text-slate-500 mb-6">
-                    <span className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"/> 已在4家景区试点</span>
-                  </div>
-
-                  <div className="p-4 bg-indigo-50 rounded-2xl text-indigo-900 font-bold text-center text-sm">
-                    计划旅发大会实现“黄小西吃晚饭”全面上线及 2.0 版本发布
-                  </div>
+                  <ul className="space-y-4 text-slate-600">
+                    <li className="leading-relaxed flex items-start gap-3">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2.5 shrink-0" />
+                      <span>已在加榜梯田、云峰屯堡、岜沙苗寨、多彩贵州城四家景区开展试点测试</span>
+                    </li>
+                    <li className="leading-relaxed flex items-start gap-3">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2.5 shrink-0" />
+                      <span>计划旅发大会实现“黄小西吃晚饭”全面上线及2.0版本发布</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="lg:col-span-4 flex justify-center gap-4">
