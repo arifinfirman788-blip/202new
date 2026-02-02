@@ -667,15 +667,15 @@ const App = () => {
                 <div className="lg:col-span-8">
                   <div className="bg-white rounded-[48px] p-10 border border-slate-100 shadow-sm">
                      <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                       <UserCircle className="text-blue-600" size={28} /> 3. 多端数字分身
+                       <UserCircle className="text-blue-600" size={28} /> 3. 聚焦员工效能提升，为员工提供智能助手
                      </h4>
-                     <p className="text-slate-600 mb-4">全场景角色覆盖：住客端、酒店/员工端。</p>
+                     <p className="text-slate-600 mb-4">为酒店员工提供“客房服务助手”、“前台记事助手”等智能体，其中“前台记事助手”预计在年前上线。</p>
                      <ProgressBar label="年前全部上线" percentage={90} color="bg-blue-600" />
                   </div>
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/202new/image/2-3.png" alt="多端协同" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/868dbb8bc5354d00ed5c90e27c26931d.png" alt="多端协同" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
