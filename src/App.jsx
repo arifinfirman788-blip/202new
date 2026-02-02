@@ -703,15 +703,24 @@ const App = () => {
                 <div className="lg:col-span-8">
                   <div className="bg-white rounded-[48px] p-10 border border-slate-100 shadow-sm">
                      <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                       <ShoppingBag className="text-emerald-600" size={28} /> 5. 通用供应链
+                       <ShoppingBag className="text-emerald-600" size={28} /> 5. 聚焦流量渠道拓展
                      </h4>
-                     <p className="text-slate-600 mb-4">交易中台赋能，预计2月10日完成开发测试，实现交易闭环。</p>
-                     <ProgressBar label="开发测试进度" percentage={80} color="bg-emerald-600" />
+                     <ul className="space-y-4 text-slate-600 mb-6">
+                       <li className="leading-relaxed">
+                         <span className="font-bold text-indigo-600 mr-2">a.</span>
+                         通过对接阿里、高德等主流平台，建立酒店自有服务门户
+                       </li>
+                       <li className="leading-relaxed">
+                         <span className="font-bold text-indigo-600 mr-2">b.</span>
+                         可在多个平台上实现酒店智能体直接对接住客咨询、预约等服务
+                       </li>
+                     </ul>
+                     <ProgressBar label="接入进度" percentage={80} color="bg-emerald-600" />
                   </div>
                 </div>
                 <div className="lg:col-span-4 flex justify-center">
                   <div className="w-[240px]">
-                    <img src="/202new/image/2-5.png" alt="交易闭环" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
+                    <img src="/202new/image/c143b31a430951881367b7e8c49abdcb.png" alt="交易闭环" className="w-full rounded-[24px] shadow-lg border border-slate-100" />
                   </div>
                 </div>
               </div>
