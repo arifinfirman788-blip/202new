@@ -1130,9 +1130,9 @@ const App = () => {
              </button>
              
              <div className="flex-1 overflow-y-auto rounded-[32px] md:pr-2">
-               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-10">
+               <div className="flex flex-col gap-8 pb-10">
                  {/* Mobile Images Grid */}
-                 <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
                     {[
                       import.meta.env.BASE_URL + 'image/0c518697542887c4c842bd55ec6f01f9.jpg',
                       import.meta.env.BASE_URL + 'image/2-1.png',
@@ -1146,7 +1146,7 @@ const App = () => {
                  </div>
 
                  {/* PC Image */}
-                 <div className="lg:col-span-7 flex flex-col gap-6 sticky top-0">
+                 <div className="w-full">
                    <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-800/50">
                      <img 
                        src={import.meta.env.BASE_URL + "image/4991f55ea85abc50aa6a75c6effb763f.png"} 
