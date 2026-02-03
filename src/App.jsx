@@ -607,7 +607,7 @@ const App = () => {
             {/* 关键数据 */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               <DataCard icon={Briefcase} value="200+" label="对接酒店" bgColor="bg-slate-50" color="text-slate-900" />
-              <DataCard icon={CheckCircle} value="105" label="上线试用" bgColor="bg-emerald-50" color="text-emerald-600" />
+              <DataCard icon={CheckCircle} value="105" label="陆续上线" bgColor="bg-emerald-50" color="text-emerald-600" />
               <DataCard icon={Users} value="9886" label="注册用户" bgColor="bg-blue-50" color="text-blue-600" />
               <DataCard icon={MessageSquare} value="1.9w+" label="AI问答" bgColor="bg-indigo-50" color="text-indigo-600" />
             </div>
