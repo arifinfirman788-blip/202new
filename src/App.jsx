@@ -617,8 +617,8 @@ const App = () => {
                  <p className="text-2xl font-black text-slate-900">675条</p>
                </div>
                <div className="bg-slate-50 p-6 rounded-2xl text-center">
-                 <p className="text-slate-500 font-bold text-sm mb-1">平均每家试用频次</p>
-                 <p className="text-2xl font-black text-slate-900">超200次</p>
+                 <p className="text-slate-500 font-bold text-sm mb-1">满房情况下，日活</p>
+                 <p className="text-2xl font-black text-slate-900">超20%</p>
                </div>
                <div className="bg-slate-50 p-6 rounded-2xl text-center">
                  <p className="text-slate-500 font-bold text-sm mb-1">服务响应效率提升</p>
