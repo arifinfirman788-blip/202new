@@ -677,11 +677,15 @@ const App = () => {
                        <li className="leading-relaxed pl-6 text-sm bg-slate-50 p-3 rounded-xl border border-slate-100">
                          <span className="font-bold text-indigo-600 mr-2">b.</span>
                          <span className="font-bold text-slate-700">两会运行数据：</span>
-                         <div className="grid grid-cols-2 gap-2 mt-2">
-                           <div>日均访问量：<span className="font-bold text-slate-900">70人</span></div>
-                           <div>总访问量：<span className="font-bold text-slate-900">209人</span></div>
-                           <div>日均问答数：<span className="font-bold text-slate-900">90条</span></div>
-                           <div>总问答数：<span className="font-bold text-slate-900">301条</span></div>
+                         <div className="grid grid-cols-2 gap-4 mt-2">
+                           <div className="bg-white p-2 rounded-lg border border-slate-100 shadow-sm text-center">
+                             <div className="text-slate-500 text-xs mb-1">日均访问量</div>
+                             <div className="font-black text-slate-900 text-lg">70人</div>
+                           </div>
+                           <div className="bg-white p-2 rounded-lg border border-slate-100 shadow-sm text-center">
+                             <div className="text-slate-500 text-xs mb-1">日均问答数</div>
+                             <div className="font-black text-slate-900 text-lg">90条</div>
+                           </div>
                          </div>
                        </li>
                        <li className="leading-relaxed">
